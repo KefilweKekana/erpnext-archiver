@@ -1,0 +1,16 @@
+[project]
+name = "erpnext_archiver"
+authors = [
+    { name = "Your Company", email = "info@example.com" }
+]
+description = "Long-term data archiving for ERPNext — keeps only current fiscal year live."
+requires-python = ">=3.10"
+readme = "README.md"
+dynamic = ["version"]
+
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.bench]
+app-name = "erpnext_archiver"

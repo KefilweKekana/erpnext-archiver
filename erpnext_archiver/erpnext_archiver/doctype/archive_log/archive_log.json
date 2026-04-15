@@ -1,0 +1,150 @@
+{
+  "actions": [],
+  "autoname": "format:ARCH-LOG-{####}",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "fiscal_year",
+    "company",
+    "column_break_1",
+    "status",
+    "archived_on",
+    "section_details",
+    "doctype_name",
+    "date_field",
+    "column_break_2",
+    "from_date",
+    "to_date",
+    "section_counts",
+    "rows_archived",
+    "rows_child_archived",
+    "column_break_3",
+    "archive_table_name",
+    "section_error",
+    "error_message"
+  ],
+  "fields": [
+    {
+      "fieldname": "fiscal_year",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Fiscal Year",
+      "options": "Fiscal Year",
+      "reqd": 1
+    },
+    {
+      "fieldname": "company",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Company",
+      "options": "Company",
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_break_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "Pending",
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Status",
+      "options": "Pending\nIn Progress\nCompleted\nFailed\nRestored"
+    },
+    {
+      "fieldname": "archived_on",
+      "fieldtype": "Datetime",
+      "label": "Archived On"
+    },
+    {
+      "fieldname": "section_details",
+      "fieldtype": "Section Break",
+      "label": "Details"
+    },
+    {
+      "fieldname": "doctype_name",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "DocType",
+      "reqd": 1
+    },
+    {
+      "fieldname": "date_field",
+      "fieldtype": "Data",
+      "label": "Date Field"
+    },
+    {
+      "fieldname": "column_break_2",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "from_date",
+      "fieldtype": "Date",
+      "label": "From Date"
+    },
+    {
+      "fieldname": "to_date",
+      "fieldtype": "Date",
+      "label": "To Date"
+    },
+    {
+      "fieldname": "section_counts",
+      "fieldtype": "Section Break",
+      "label": "Row Counts"
+    },
+    {
+      "default": "0",
+      "fieldname": "rows_archived",
+      "fieldtype": "Int",
+      "in_list_view": 1,
+      "label": "Rows Archived"
+    },
+    {
+      "default": "0",
+      "fieldname": "rows_child_archived",
+      "fieldtype": "Int",
+      "label": "Child Rows Archived"
+    },
+    {
+      "fieldname": "column_break_3",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "archive_table_name",
+      "fieldtype": "Data",
+      "label": "Archive Table"
+    },
+    {
+      "fieldname": "section_error",
+      "fieldtype": "Section Break",
+      "label": "Error",
+      "collapsible": 1
+    },
+    {
+      "fieldname": "error_message",
+      "fieldtype": "Small Text",
+      "label": "Error Message"
+    }
+  ],
+  "links": [],
+  "modified": "2024-01-01 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "ERPNext Archiver",
+  "name": "Archive Log",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

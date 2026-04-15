@@ -1,0 +1,81 @@
+{
+  "actions": [],
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "enabled",
+    "section_doctypes",
+    "doctypes_to_archive",
+    "section_options",
+    "require_period_closing_voucher",
+    "column_break_opts",
+    "backup_before_archive"
+  ],
+  "fields": [
+    {
+      "default": "1",
+      "fieldname": "enabled",
+      "fieldtype": "Check",
+      "label": "Enable Archiving"
+    },
+    {
+      "fieldname": "section_doctypes",
+      "fieldtype": "Section Break",
+      "label": "DocTypes to Archive"
+    },
+    {
+      "fieldname": "doctypes_to_archive",
+      "fieldtype": "Table",
+      "label": "DocTypes",
+      "options": "Archive Doctype Row",
+      "reqd": 1
+    },
+    {
+      "fieldname": "section_options",
+      "fieldtype": "Section Break",
+      "label": "Safety Options"
+    },
+    {
+      "default": "1",
+      "description": "Block archiving if Period Closing Voucher has not been submitted for the target fiscal year.",
+      "fieldname": "require_period_closing_voucher",
+      "fieldtype": "Check",
+      "label": "Require Period Closing Voucher"
+    },
+    {
+      "fieldname": "column_break_opts",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "1",
+      "description": "Take a full site backup before running archive operations.",
+      "fieldname": "backup_before_archive",
+      "fieldtype": "Check",
+      "label": "Backup Before Archive"
+    }
+  ],
+  "issingle": 1,
+  "links": [],
+  "modified": "2024-01-01 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "ERPNext Archiver",
+  "name": "Archive Settings",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}
